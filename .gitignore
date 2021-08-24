@@ -11,6 +11,9 @@
 # env file
 .env
 
+# yarn
+yarn.lock
+
 # production
 /build
 
