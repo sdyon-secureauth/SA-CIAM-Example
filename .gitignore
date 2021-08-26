@@ -1,3 +1,5 @@
+# prod
+build/
 
 # testing
 /coverage
