@@ -59,6 +59,13 @@ class Home extends React.Component {
         window.location.href = pathUrl;
     }
 
+    deleteAccount = async () => {
+        this.props.history.push('/deleteaccount');
+        // in order for the redirect to occur, the following is requried
+        let pathUrl = window.location.href;
+        window.location.href = pathUrl;
+    }
+
     async componentDidMount() {
         if (window.localStorage.getItem('token')) {
           console.log(window.localStorage.getItem('token'));
@@ -1049,12 +1056,12 @@ class Home extends React.Component {
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="component-messages.html" className="item">
+                                    <a href="#" className="item" onClick={ () => { this.deleteAccount() } }>
                                         <div className="icon-box bg-primary">
-                                            <ion-icon name="chatbubble-outline"></ion-icon>
+                                            <ion-icon name="trash-outline"></ion-icon>
                                         </div>
                                         <div className="in">
-                                            Support
+                                            Delete Account
                                         </div>
                                     </a>
                                 </li>

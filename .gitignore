@@ -1,5 +1,6 @@
 # prod
 build/
+dist/
 
 # testing
 /coverage

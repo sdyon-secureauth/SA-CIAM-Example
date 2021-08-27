@@ -7,12 +7,9 @@ import Register from './Register/Register';
 import ForgotPassword from './ForgotPassword/ForgotPassword';
 import Home from './Home/Home';
 import Auth from './Authentication/Auth';
+import DeleteAccount from './DeleteAccount/DeleteAccount';
 
 function App() {
-  
-  fetch('/users')
-  .then(response => response.text())
-  .then(data => console.log({data}));
 
   return (
       <Router>
@@ -26,6 +23,7 @@ function App() {
                     <Route exact path="/register" component={Register} />
                     <Route exact path="/forgotpassword" component={ForgotPassword} />
                     <Route exact path='/auth' component={Auth} />
+                    <Route exact path='/deleteaccount' component={DeleteAccount} />
                   </Switch>
             </div>
       </Router>
